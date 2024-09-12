@@ -1,0 +1,27 @@
+# Função que verifica se um número é par
+def eh_par(numero):
+    return numero % 2 == 0
+
+# Função que verifica se um número é ímpar
+def eh_impar(numero):
+    return numero % 2 != 0
+
+# Função que verifica se a soma de um número par com um número ímpar é ímpar
+def verifica_soma_par_impar(num1, num2):
+    if eh_par(num1) and eh_impar(num2):
+        soma = num1 + num2
+        print(f"A soma de {num1} (par) e {num2} (ímpar) é {soma}.")
+        print(f"Como esperado, o resultado {soma} é ímpar.")
+    elif eh_impar(num1) and eh_par(num2):
+        soma = num1 + num2
+        print(f"A soma de {num1} (ímpar) e {num2} (par) é {soma}.")
+        print(f"Como esperado, o resultado {soma} é ímpar.")
+    else:
+        print(f"Ambos os números são pares ou ambos são ímpares, a condição não se aplica.")
+
+# Teste com entrada do usuário
+num1 = int(input("Digite o primeiro número inteiro: "))
+num2 = int(input("Digite o segundo número inteiro: "))
+
+# Chamada da função para verificar a soma
+verifica_soma_par_impar(num1, num2)
