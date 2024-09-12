@@ -1,0 +1,19 @@
+# Função que verifica se um número é ímpar
+def eh_impar(numero):
+    return numero % 2 != 0
+
+# Função que comprova a relação entre o número e seu quadrado
+def verifica_impar_quadrado(numero):
+    quadrado = numero ** 2
+    if eh_impar(quadrado):
+        print(f"O quadrado de {numero} é {quadrado}, que é ímpar.")
+        if eh_impar(numero):
+            print(f"Portanto, {numero} também é ímpar.")
+        else:
+            print(f"Entretanto, {numero} é par. Isso não deveria acontecer.")
+    else:
+        print(f"O quadrado de {numero} é {quadrado}, que é par.")
+
+# Teste com exemplos
+numero = int(input("Digite um número: "))
+verifica_impar_quadrado(numero)
