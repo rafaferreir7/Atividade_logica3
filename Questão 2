@@ -1,0 +1,19 @@
+# Função que verifica se um número é par
+def eh_par(numero):
+    return numero % 2 == 0
+
+# Função que verifica se o produto de dois números é par
+def verifica_produto_par(num1, num2):
+    if eh_par(num1) and eh_par(num2):
+        produto = num1 * num2
+        print(f"O produto de {num1} e {num2} é {produto}.")
+        print(f"Como ambos são pares, o resultado {produto} também é par.")
+    else:
+        print(f"Um dos números ({num1}, {num2}) não é par, portanto, a condição não se aplica.")
+
+# Teste com entrada do usuário
+num1 = int(input("Digite o primeiro número inteiro: "))
+num2 = int(input("Digite o segundo número inteiro: "))
+
+# Chamada da função para verificar o produto
+verifica_produto_par(num1, num2)
