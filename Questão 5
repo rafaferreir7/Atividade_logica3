@@ -1,0 +1,19 @@
+# Função que verifica se um número é ímpar
+def eh_impar(numero):
+    return numero % 2 != 0
+
+# Função que verifica se o produto de dois números ímpares é ímpar
+def verifica_produto_impar(num1, num2):
+    if eh_impar(num1) and eh_impar(num2):
+        produto = num1 * num2
+        print(f"O produto de {num1} e {num2} é {produto}.")
+        print(f"Como ambos são ímpares, o resultado {produto} também é ímpar.")
+    else:
+        print(f"Um dos números ({num1}, {num2}) não é ímpar, então a condição não se aplica.")
+
+# Teste com entrada do usuário
+num1 = int(input("Digite o primeiro número inteiro: "))
+num2 = int(input("Digite o segundo número inteiro: "))
+
+# Chamada da função para verificar o produto
+verifica_produto_impar(num1, num2)
